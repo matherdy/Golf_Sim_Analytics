@@ -1,4 +1,4 @@
-# Golf Simulator Tools
+# __Golf Simulator Tools__
 
 The following is a list of projects in order of difficulty, where each project will add addtional functionaltiy to make the software tool better.  For each tasks we should add notes on more details of what technology is needed or how we can do each part.
 
@@ -8,7 +8,7 @@ For our golf simulator we want to create a system where when you can stream vide
 
 
 
-### Project Tasks
+### _Project Tasks_
 
 1. Make an app that will stream video and send it to a local computer, we can start with a wired connection but eventually we want to transfer this stream via bluetooth or wifi.
 
@@ -24,6 +24,7 @@ For our golf simulator we want to create a system where when you can stream vide
 
 This will build on the first project by first asking the player to 'sign in' with their face so the system knows which player is currently swinging.  We can first use a physical sign in where the player will type their name into the comptuer but eventually a face detection system will be better.  We can then add some voice functionallity on the tool so the player can decide if he wants the comptuer to store any of the clips from his session with simple voice commands.  The software will store any video the player wishes to keep onto an external hard drive (or whereever we decide to store the clips) so they can be analyzed by the player later.
 
+### _Project Tasks_
 
 1. Find existing face detection software that will distinguish individual people and test it out for accurcay.
 
@@ -42,7 +43,9 @@ This will build on the first project by first asking the player to 'sign in' wit
 Using a human body movemnt tracker software like human pose extimation (MoveNet Runs at 30 FPS on android phones, or OpenPifPaf but might need a GPU for it) track the movement of the players broken down into a kinematic view.  This way we can track the movements of each of the individual body parts.  We shouldn't need to have markers on the players for each of the joint positions but might make the project easier and require less processing power.  We can then use this data and compare it to videos of the pros that have been broken down in the same way and compare the differences to help track what could be improved on the swing.
 
 
+### Project Tasks
 
+1. 
 
 
 
