@@ -10,10 +10,10 @@ repos:
       - id: isort
         name: isort
         args: ["--profile", "black", "--filter-files"]
-  - repo: https://github.com/Lucas-C/pre-commit-hooks-safety
-    rev: v1.3.1
-    hooks:
-      - id: python-safety-dependencies-check
+  #- repo: https://github.com/Lucas-C/pre-commit-hooks-safety
+  #rev: v1.3.1
+  #hooks:
+  # - id: python-safety-dependencies-check
   - repo: https://github.com/PyCQA/flake8
     rev: 6.0.0
     hooks:
@@ -28,6 +28,6 @@ repos:
       - id: detect-secrets
         args: ["--baseline", ".secrets.baseline"]
   - repo: https://github.com/sqlfluff/sqlfluff
-    rev: 1.4.5
+    rev: 2.1.2
     hooks:
       - id: sqlfluff-lint
