@@ -16,8 +16,9 @@ mpPose = mp.solutions.pose
 
 pose = mpPose.Pose()
 
+vid_path = r"/Users/dylanmather/Documents/Projects/Golf_Sim/Golf_Sim_Analytics/Sample_Vids/Dylan_Swing_Bandon.MOV"
 
-cap = cv2.VideoCapture("Sample_Vids/Dylan_Swing_Bandon.MOV")
+cap = cv2.VideoCapture(vid_path)
 pTime = 0
 while True:
     success, img = cap.read()
@@ -32,6 +33,7 @@ while True:
             h, w, c = img.shape
             print(id, lm)
 
+            # calculate the pixle values by multiplying the lm.x and lm.y image ratio by w and h
             cx, cy = int(lm.x * w), int(lm.y * h)
             cv2.circle(img, (cx, cy), 5, (255, 0, 0), cv2.FILLED)
 

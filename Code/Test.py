@@ -1,41 +1,39 @@
+import os
+import time
+
 import cv2
+import PoseModule as pm
 
-# import numpy as np
+vid_dir = "//Users//dylanmather//Documents//Projects//Golf_Sim//Golf_Sim_Analytics//Sample_Vids//"
+vid_paths = [vid_dir + path for path in os.listdir(vid_dir)]
 
-# This code is taken from a tutorial from the openCV website about playing and taking
-# video:  https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_gui/py_video_display/py_video_display.html
+vid_num = 5
+limb_numbers = [20, 21, 24, 23]
+
+vid_path = vid_paths[vid_num]
+
+cap = cv2.VideoCapture(vid_path)
+pTime = 0
+detector = pm.poseDetector()
 
 
-# This will take video from you camera and turn it to gray scale
+while True:
+    success, img = cap.read()
+    img = detector.findPose(img)
+    lmList = detector.findPosition(img, draw=False)
+    for limb in limb_numbers:
+        cv2.circle(img, (lmList[limb][1], lmList[limb][2]), 5, (255, 0, 0), cv2.FILLED)
+    cTime = time.time()
+    fps = 1 / (cTime - pTime)
+    pTime = cTime
 
-# cap = cv2.VideoCapture(0)
+    cv2.putText(img, str(int(fps)), (70, 50), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
+    cv2.imshow("Image", img)
 
-# while(True):
-#     #Capture frame by frame
-#     ret,frame = cap.read()
-
-#     #converts the video to grayscale
-#     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
-#     #Display the frame
-#     cv2.imshow("frame",gray)
-#     if cv2.waitKey(1) & 0xFF == ord('q'):
-#         break
-
-# cap.release()
-# cv2.destroyAllWindows()
-
-# This will play a video from file
-
-cap = cv2.VideoCapture("Sample_Vids/Dylan_Swing_Bandon.MOV")
-
-while cap.isOpened():
-    ret, frame = cap.read()
-
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
-    cv2.imshow("frame", gray)
     if cv2.waitKey(1) & 0xFF == ord("q"):
+        print("Video processing stopped by user.")
         break
+
+
 cap.release()
 cv2.destroyAllWindows()
