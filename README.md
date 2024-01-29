@@ -6,6 +6,10 @@ The following is a list of projects in order of difficulty, where each project w
 
 For our golf simulator we want to create a system where when you can stream video from your phone to a computer. The computer will start recording when there is a golfer in frame and track their movements. When the player takes his swing, the program will save a video clip of the whole swing and play it on repeat till the next swing occurs. This will not save any of the video data so should not requrie lots of video storage.
 
+Research:
+- https://www.ijraset.com/research-paper/golf-swing-analysis-using-computer-vision
+
+
 ### _Project Tasks_
 
 1. Make an app that will stream video and send it to a local computer, we can start with a wired connection but eventually we want to transfer this stream via bluetooth or wifi.
