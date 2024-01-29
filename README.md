@@ -9,6 +9,9 @@ For our golf simulator we want to create a system where when you can stream vide
 Research:
 - https://www.ijraset.com/research-paper/golf-swing-analysis-using-computer-vision
 - https://www.commsp.ee.ic.ac.uk/~ng1/pdf/gehrig-et-al-bmvc03.pdf
+- https://github.com/wmcnally/golfdb
+- https://arxiv.org/abs/1903.06528
+
 
 ### _Project Tasks_
 
