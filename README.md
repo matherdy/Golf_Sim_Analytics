@@ -6,11 +6,14 @@ The following is a list of projects in order of difficulty, where each project w
 
 For our golf simulator we want to create a system where when you can stream video from your phone to a computer. The computer will start recording when there is a golfer in frame and track their movements. When the player takes his swing, the program will save a video clip of the whole swing and play it on repeat till the next swing occurs. This will not save any of the video data so should not requrie lots of video storage.
 
-Research:
+### Research:
 - https://www.ijraset.com/research-paper/golf-swing-analysis-using-computer-vision
 - https://www.commsp.ee.ic.ac.uk/~ng1/pdf/gehrig-et-al-bmvc03.pdf
 - https://github.com/wmcnally/golfdb
 - https://arxiv.org/abs/1903.06528
+
+### OpenCV course: 
+- https://opencv.org/university/free-opencv-course/?utm_source=google_ads_T1&utm_medium=cpc&utm_campaign=obc&utm_id=OBC&gclid=CjwKCAiAk9itBhASEiwA1my_67-DwbSctHNs_1_xh9BEGi0ExuBKjIZvCKEzsIyFX1iP0HyCh36FoBoCku4QAvD_BwE
 
 
 ### _Project Tasks_
