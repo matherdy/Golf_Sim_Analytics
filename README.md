@@ -12,6 +12,9 @@ For our golf simulator we want to create a system where when you can stream vide
 - https://github.com/wmcnally/golfdb
 - https://arxiv.org/abs/1903.06528
 
+- opencv ball tracking
+   - https://pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/
+
 ### OpenCV course: 
 - https://opencv.org/university/free-opencv-course/?utm_source=google_ads_T1&utm_medium=cpc&utm_campaign=obc&utm_id=OBC&gclid=CjwKCAiAk9itBhASEiwA1my_67-DwbSctHNs_1_xh9BEGi0ExuBKjIZvCKEzsIyFX1iP0HyCh36FoBoCku4QAvD_BwE
 
